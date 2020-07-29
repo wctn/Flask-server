@@ -25,7 +25,7 @@ def process():
     signature = Comments(name=name,comment=comment)
     db.session.add(signature)
     db.session.commit()
-    return redirect(url_for('index2'))
+    return redirect(url_for('index'))
 if __name__ == '__main__':
     app.debug = True
     app.run(host='0.0.0.0', port=80)
