@@ -15,7 +15,7 @@ class Comments(db.Model):
 def index():
     result = Comments.query.all()
     return render_template('index2.html',result=result)
-@app.route('/sign1')
+@app.route('/sign')
 def sign():
     return render_template('sign1.html')
 @app.route('/process',methods=['POST'])
