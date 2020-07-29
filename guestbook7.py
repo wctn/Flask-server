@@ -2,7 +2,7 @@ from flask import Flask,render_template,request,redirect,url_for
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Column,Integer,String,Date
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI']='postgresql://webadmin:CSTcif67231@node1434-wichittranut.app.ruk-com.cloud:11021/testdb'
+app.config['SQLALCHEMY_DATABASE_URI']='postgresql://webadmin:CSTcif67231@10.100.2.50:5432/testdb'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 class Comments(db.Model):
