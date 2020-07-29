@@ -15,7 +15,7 @@ class Comments(db.Model):
 def index():
     result = Comments.query.all()
     return render_template('index2.html',result=result)
-@app.route('/sign')
+@app.route('/sign1')
 def sign():
     return render_template('sign1.html')
 @app.route('/process',methods=['POST'])
@@ -25,7 +25,7 @@ def process():
     signature = Comments(name=name,comment=comment)
     db.session.add(signature)
     db.session.commit()
-    return redirect(url_for('index'))
+    return redirect(url_for('index2'))
 if __name__ == '__main__':
     app.debug = True
     app.run(host='0.0.0.0', port=80)
